@@ -10,6 +10,7 @@
     "deploy": "npx firebase deploy --only hosting"
   },
   "dependencies": {
+    "bootstrap": "^5.1.1",
     "core-js": "^3.18.1",
     "firebase": "^8.10.0",
     "firebase-tools": "^9.19.0",

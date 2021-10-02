@@ -1,20 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <Form></Form>
+    <ListaPacientes></ListaPacientes>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
-import HelloWorld from "@/components/HelloWorld.vue";
+import Form from "../components/FormPacientes.vue"
+import ListaPacientes from "../components/ListaPacientes.vue"
 import Firebase from "firebase";
 
 export default {
-  name: "Home",
   components: {
-    HelloWorld,
+    Form, ListaPacientes
   },
   data: () => ({
     pacientes: []
