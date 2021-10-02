@@ -10,6 +10,7 @@
     "deploy": "npx firebase deploy --only hosting"
   },
   "dependencies": {
+    "axios": "^0.22.0",
     "bootstrap": "^5.1.1",
     "core-js": "^3.18.1",
     "firebase": "^8.10.0",

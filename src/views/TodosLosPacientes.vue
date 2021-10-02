@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="paciente in $store.state.pacientes" :key="paciente.id">
-          {{paciente.nombre}}
+        {{ paciente.nombre }}
       </li>
     </ul>
   </div>

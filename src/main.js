@@ -4,11 +4,9 @@ import router from "./router";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import Firebase from "firebase";
 
-import Firebase from "firebase"
 Vue.config.productionTip = false;
-
-
 
 Firebase.initializeApp({
   apiKey: process.env.VUE_APP_FIREBASE_APIKEY,
@@ -19,9 +17,6 @@ Firebase.initializeApp({
   appId: process.env.VUE_APP_FIREBASE_APPID,
   measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID,
 });
-
-
-
 
 new Vue({
   router,
