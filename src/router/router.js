@@ -9,11 +9,6 @@ const routes = [
     name: "Home",
     component: () => import("../views/Home.vue"),
   },
-  {
-    path: "/Formulario-Pacientes",
-    name: "todosLosPacientes",
-    component: () => import("../views/TodosLosPacientes.vue"),
-  },
 ];
 
 const router = new VueRouter({

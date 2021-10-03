@@ -15,6 +15,9 @@ export default new Vuex.Store({
     AGREGAR_PACIENTE(state, nuevoPacienteAgregado) {
       state.pacientes = nuevoPacienteAgregado;
     },
+    ELIMINAR_PACIENTE(state, pacienteEliminado) {
+      state.pacientes = pacienteEliminado;
+    },
   },
   actions: {
     TraerTodosLosPacientes(context) {
@@ -50,6 +53,19 @@ export default new Vuex.Store({
           context.commit("AGREGAR_PACIENTE", pacienteNuevo);
         });
     },
+    EliminarPaciente(context) {
+      Firebase.firestore()
+        .collection("pacientes")
+        .get()
+        .then((collection) => {
+          const idPacienteEliminado = ""
+
+          collection.forEach((document) => {
+            this.idPacienteEliminado.splice({ id: document.id, ...document.data() });
+          });
+
+          context.commit("ELIMINAR_PACIENTE", pacienteEliminado);
+      });
+    },
   },
-  modules: {},
 });
